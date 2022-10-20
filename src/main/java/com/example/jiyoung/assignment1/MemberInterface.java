@@ -1,12 +1,24 @@
 package com.example.jiyoung.assignment1;
 
-public interface ClassInterface {
-    public String PLACE="컴퓨터실";
+import java.util.List;
 
-    static void addClass(String code, String name){
-        System.out.println("code가 "+code+"인 수업"+name+"을 추가한다");
+public interface MemberInterface
+{
+
+    //상수 필드
+    public String BELONG="sopt";
+
+    //정적 메소드
+    static void introduceMember(Long id, String name){
+        System.out.println(BELONG+"에서의 id는 "+id+", 이름은 "+name);
     }
 
-    void
+    //디폴드 메소드
+    default void join(){
+        System.out.println("가입을 환영합니다.");
+    }
+
+    void getMemberInfo(int age, String place);
+
 
 }

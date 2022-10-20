@@ -1,5 +1,7 @@
 package com.example.jiyoung;
 
+import com.example.jiyoung.assignment1.MemberInterface;
+import com.example.jiyoung.assignment1.MemberServiceImpl;
 import com.example.jiyoung.study1.PrintObject;
 import com.example.jiyoung.study1.Server;
 import com.example.jiyoung.study1.User;
@@ -41,6 +43,12 @@ public class JiyoungApplication {
 
 		object1.printData();
 		object2.printData();
+
+		MemberServiceImpl memberService=new MemberServiceImpl();
+		memberService.getMemberInfo(25, "동대문구");
+		memberService.getIntro();
+		memberService.join();
+
 	}
 
 }
