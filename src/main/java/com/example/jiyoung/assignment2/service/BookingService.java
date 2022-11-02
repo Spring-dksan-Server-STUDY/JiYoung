@@ -2,12 +2,19 @@ package com.example.jiyoung.assignment2.service;
 
 import com.example.jiyoung.assignment2.model.Booking;
 import com.example.jiyoung.assignment2.repository.BookingRepository;
+import lombok.RequiredArgsConstructor;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
+import javax.transaction.Transactional;
 import java.util.List;
 
+@Service
+@Transactional //데이터 관련
 public class BookingService implements BookingServiceInterface{
     private final BookingRepository repository;
 
+    @Autowired
     public BookingService(BookingRepository bookingRepository){
         this.repository=bookingRepository;
     }
