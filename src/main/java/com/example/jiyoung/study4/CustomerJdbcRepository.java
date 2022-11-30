@@ -14,9 +14,9 @@ import java.util.UUID;
 
 public class CustomerJdbcRepository implements CustomerRepository{
     private static final Logger logger= LoggerFactory.getLogger(CustomerJdbcRepository.class);
-    private static final String url="jdbc:mysql://server-study.cxc1mmy8vmlc.ap-northeast-2.rds.amazonaws.com:3000/customer?serverTimezone=Asia/Seoul&characterEncoding=UTF-8";
-    private static final String user="admin";
-    private static final String password="admin1234!";
+    private static final String url = "jdbc:mysql://localhost/anmuserver";
+    private static final String user = "root";
+    private static final String password = "root1234!";
 
     @Override
     public Customer insert(Customer customer) {
