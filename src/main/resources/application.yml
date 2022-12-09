@@ -1,22 +1,6 @@
 spring:
   datasource:
-    url: jdbc:h2:tcp://localhost/~/dksanserver
-    username: sa
-    password:
-    driver-class-name: org.h2.Driver
-
-  jpa:
-    hibernate:
-      ddl-auto: create
-    properties:
-      hibernate:
-        format_sql: true
-        hbm2ddl:
-          auto: none
-    show-sql: true
-    defer-datasource-initialization: true
-
-  logging:
-    level:
-      org.hibernate.SQL: debug
-      org.hibernate.type: trace
+    url: jdbc:mysql://localhost/public
+    username: root
+    password: root1234!
+    driver-class-name: com.mysql.cj.jdbc.Driver
